@@ -1,0 +1,11 @@
+input: .
+output: .retype
+url: https://www.datawars.io
+branding:
+  title: DataWars' API
+  label: Docs
+links:
+- text: DataWars
+  link: https://www.datawars.io
+footer:
+  copyright: "&copy; Copyright DataWars, Inc {{ year }}. All rights reserved."
