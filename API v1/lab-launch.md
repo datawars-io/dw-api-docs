@@ -29,7 +29,11 @@ Authorization: Token <TOKEN>
 
 ### Authentication
 
-To authenticate the request, you must provide an `Authorization` header with a valid token. Contact DataWars' support team to obtain a token.
+To authenticate the request, you must provide an `Authorization` header with a valid token.
+
+The token is an alphanumeric 40-character string. It must be kept private, **make sure to NOT expose this token to any customer or user outside of your organization**.
+
+Contact DataWars' support team to obtain a token.
 
 
 ### Payload
