@@ -1,6 +1,6 @@
 # Welcome to DataWars' API documentation
 
-DataWars is a hands-on labs provider focused on Data-related skills like Data Science, Data Analysis, Machine Learning, Databases, Vizualizations a more.
+DataWars is a hands-on labs provider focused on Data-related skills like Data Science, Data Analysis, Machine Learning, Databases, Visualizations and more.
 
 ![DataWars](https://cdn.prod.website-files.com/6388ceb5d61219c1aa95c406/668ebcc7ccdb9b7a02122ec6_Feature%201-p-800.png)
 
