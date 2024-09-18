@@ -1,6 +1,6 @@
 # Lab Launch Flow
 
-Launching a lab refers to initiating a lab session for a user in the Platform (LMS) so they can complete the lab using DataWars' infrastructure and app.
+Launching a lab refers to initiating a lab session for a Platform (LMS) user so they can complete the lab using DataWars' infrastructure and app.
 
 The user may or may not have an existing session or account on DataWars. The launch process ensures that the user exists and is properly authenticated before redirecting them to the labs app.
 
