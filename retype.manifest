@@ -1,6 +1,6 @@
 {
-  "version": "3.5.0",
-  "created": "2024-09-16T13:16:26Z",
+  "version": "3.6.0",
+  "created": "2024-09-18T12:04:10Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -13,14 +13,19 @@
       "old": true
     },
     {
-      "path": "api-v1/authentication/index.html"
+      "path": "api-v1/authentication/index.html",
+      "old": true
     },
     {
       "path": "api-v1/description/index.html",
       "old": true
     },
     {
-      "path": "api-v1/launch-flow/index.html"
+      "path": "api-v1/lab-launch/index.html"
+    },
+    {
+      "path": "api-v1/launch-flow/index.html",
+      "old": true
     },
     {
       "path": "CNAME"
@@ -46,6 +51,9 @@
     },
     {
       "path": "resources/js/lunr.js"
+    },
+    {
+      "path": "resources/js/prism.js"
     },
     {
       "path": "resources/js/retype.js"
