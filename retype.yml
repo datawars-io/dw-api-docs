@@ -1,6 +1,5 @@
 input: .
 output: .retype
-url: https://www.datawars.io
 branding:
   title: DataWars' API
   label: Docs
