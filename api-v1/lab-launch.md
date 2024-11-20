@@ -16,12 +16,21 @@ Authorization: Token <TOKEN>
 {
     "user_id": "LMS-Us3r1D",
     "content_id": "8715dfc6-56ac-4ca2-99cf-17419d36cebb",
-    "resource_id": "abc123",  // optional
-    "context": {  // optional
+    "resource_id": "abc123",
+    "context": {
         "course": "Databases 101",
         "chapter": "Intro to DBs",
         "unit": "Unit 2",
-    }
+    },
+    "roles": [
+        "admin",
+    ],
+    "licenses": [
+        "customer-license-1"
+    ],
+    "teams": [
+        "Summer 2024 - Class 1"
+    ]
 }
 ```
 
@@ -38,13 +47,20 @@ Contact DataWars' support team to obtain a token.
 
 ### Payload
 
-* `user_id`: A unique identifier for the user in the Platform (LMS). This is external to DataWars and will be stored as `external_id` in the authenticated user.
+* `user_id`: (required) A unique identifier for the user in the Platform (LMS). This is external to DataWars and will be stored as `external_id` in the authenticated user.
 
-* `content_id`: The UUID of the project within DataWars where the user will be redirected.
+* `content_id`: (required) The UUID of the project within DataWars where the user will be redirected.
 
 * `resource_id`: A unique identifier of the content in the Platform (LMS) that links to this project, where the grading service should report back when the user makes progress. This is optional unless grading reports are required, in which case it is mandatory.
 
 * `context`: Optional JSON containing additional information about the context in which the launch was generated (e.g., course name, module, unit). There is no specific format for this JSON, and any provided fields will be stored as metadata for this launch instance.
+
+* `roles`: A list of strings containing the roles of the Platform user. Any string is valid. Roles must be mapped to DataWars' roles as part of the account integration.
+
+* `licenses`: If one or more licenses need to be assigned to the authenticated user, include the license slugs in this list. If you are unsure which license to use for each integration, contact your account manager.
+
+* `teams`: Users within the account might be grouped into teams. A user can belong to zero, one, or many teams within the account. If you want to include the authenticated user in a specific team, include the team name in this list. If the provided team does not already exist, it will be created as part of the launch process.
+
 
 ### Response
 
