@@ -22,11 +22,14 @@ Authorization: Token <TOKEN>
         "chapter": "Intro to DBs",
         "unit": "Unit 2",
     },
+    "email": "john.doe@test.com",
+    "given_name": "John",
+    "family_name": "Doe",
     "roles": [
         "admin",
     ],
     "licenses": [
-        "customer-license-1"
+        "program-1"
     ],
     "teams": [
         "Summer 2024 - Class 1"
@@ -55,7 +58,13 @@ Contact DataWars' support team to obtain a token.
 
 * `context`: Optional JSON containing additional information about the context in which the launch was generated (e.g., course name, module, unit). There is no specific format for this JSON, and any provided fields will be stored as metadata for this launch instance.
 
-* `roles`: A list of strings containing the roles of the Platform user. Any string is valid. Roles must be mapped to DataWars' roles as part of the account integration.
+* `email`: Email address of the Platform (LMS) user.
+
+* `given_name`: First name of the Platform (LMS) user.
+
+* `family_name`: Last name of the Platform (LMS) user.
+
+* `roles`: A list of strings containing the roles of the Platform (LMS) user. Any string is valid. Roles must be mapped to DataWars' roles as part of the account integration.
 
 * `licenses`: If one or more licenses need to be assigned to the authenticated user, include the license slugs in this list. If you are unsure which license to use for each integration, contact your account manager.
 
