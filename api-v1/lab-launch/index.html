@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.785447326444">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.785447792240">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -32,12 +32,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.6.0.785447326444" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.785447792240" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.785447326444" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.785447792240" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.785447326444" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.785447326444" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.785447792240" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.785447792240" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -193,11 +193,14 @@ Authorization: Token &lt;TOKEN&gt;
         &quot;chapter&quot;: &quot;Intro to DBs&quot;,
         &quot;unit&quot;: &quot;Unit 2&quot;,
     },
+    &quot;email&quot;: &quot;john.doe@test.com&quot;,
+    &quot;given_name&quot;: &quot;John&quot;,
+    &quot;family_name&quot;: &quot;Doe&quot;,
     &quot;roles&quot;: [
         &quot;admin&quot;,
     ],
     &quot;licenses&quot;: [
-        &quot;customer-license-1&quot;
+        &quot;program-1&quot;
     ],
     &quot;teams&quot;: [
         &quot;Summer 2024 - Class 1&quot;
@@ -231,7 +234,13 @@ Authorization: Token &lt;TOKEN&gt;
 </li>
 <li><p><code v-pre>context</code>: Optional JSON containing additional information about the context in which the launch was generated (e.g., course name, module, unit). There is no specific format for this JSON, and any provided fields will be stored as metadata for this launch instance.</p>
 </li>
-<li><p><code v-pre>roles</code>: A list of strings containing the roles of the Platform user. Any string is valid. Roles must be mapped to DataWars&#x27; roles as part of the account integration.</p>
+<li><p><code v-pre>email</code>: Email address of the Platform (LMS) user.</p>
+</li>
+<li><p><code v-pre>given_name</code>: First name of the Platform (LMS) user.</p>
+</li>
+<li><p><code v-pre>family_name</code>: Last name of the Platform (LMS) user.</p>
+</li>
+<li><p><code v-pre>roles</code>: A list of strings containing the roles of the Platform (LMS) user. Any string is valid. Roles must be mapped to DataWars&#x27; roles as part of the account integration.</p>
 </li>
 <li><p><code v-pre>licenses</code>: If one or more licenses need to be assigned to the authenticated user, include the license slugs in this list. If you are unsure which license to use for each integration, contact your account manager.</p>
 </li>
