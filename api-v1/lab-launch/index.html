@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.779990069537">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.785447326444">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -32,12 +32,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.6.0.779990069537" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.785447326444" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.779990069537" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.785447326444" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.779990069537" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.779990069537" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.785447326444" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.785447326444" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -187,12 +187,21 @@ Authorization: Token &lt;TOKEN&gt;
 {
     &quot;user_id&quot;: &quot;LMS-Us3r1D&quot;,
     &quot;content_id&quot;: &quot;8715dfc6-56ac-4ca2-99cf-17419d36cebb&quot;,
-    &quot;resource_id&quot;: &quot;abc123&quot;,  // optional
-    &quot;context&quot;: {  // optional
+    &quot;resource_id&quot;: &quot;abc123&quot;,
+    &quot;context&quot;: {
         &quot;course&quot;: &quot;Databases 101&quot;,
         &quot;chapter&quot;: &quot;Intro to DBs&quot;,
         &quot;unit&quot;: &quot;Unit 2&quot;,
-    }
+    },
+    &quot;roles&quot;: [
+        &quot;admin&quot;,
+    ],
+    &quot;licenses&quot;: [
+        &quot;customer-license-1&quot;
+    ],
+    &quot;teams&quot;: [
+        &quot;Summer 2024 - Class 1&quot;
+    ]
 }</code></pre>
 </doc-codeblock></div>
 <blockquote>
@@ -214,13 +223,19 @@ Authorization: Token &lt;TOKEN&gt;
     </h3>
 </doc-anchor-target>
 <ul>
-<li><p><code v-pre>user_id</code>: A unique identifier for the user in the Platform (LMS). This is external to DataWars and will be stored as <code v-pre>external_id</code> in the authenticated user.</p>
+<li><p><code v-pre>user_id</code>: (required) A unique identifier for the user in the Platform (LMS). This is external to DataWars and will be stored as <code v-pre>external_id</code> in the authenticated user.</p>
 </li>
-<li><p><code v-pre>content_id</code>: The UUID of the project within DataWars where the user will be redirected.</p>
+<li><p><code v-pre>content_id</code>: (required) The UUID of the project within DataWars where the user will be redirected.</p>
 </li>
 <li><p><code v-pre>resource_id</code>: A unique identifier of the content in the Platform (LMS) that links to this project, where the grading service should report back when the user makes progress. This is optional unless grading reports are required, in which case it is mandatory.</p>
 </li>
 <li><p><code v-pre>context</code>: Optional JSON containing additional information about the context in which the launch was generated (e.g., course name, module, unit). There is no specific format for this JSON, and any provided fields will be stored as metadata for this launch instance.</p>
+</li>
+<li><p><code v-pre>roles</code>: A list of strings containing the roles of the Platform user. Any string is valid. Roles must be mapped to DataWars&#x27; roles as part of the account integration.</p>
+</li>
+<li><p><code v-pre>licenses</code>: If one or more licenses need to be assigned to the authenticated user, include the license slugs in this list. If you are unsure which license to use for each integration, contact your account manager.</p>
+</li>
+<li><p><code v-pre>teams</code>: Users within the account might be grouped into teams. A user can belong to zero, one, or many teams within the account. If you want to include the authenticated user in a specific team, include the team name in this list. If the provided team does not already exist, it will be created as part of the launch process.</p>
 </li>
 </ul>
 <doc-anchor-target id="response">
